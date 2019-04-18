@@ -1,4 +1,4 @@
-'''The below code will automatically the segregate different files into corresponding directories'''
+'''The below code will automatically segregate different files into corresponding directories'''
 import os,shutil
 #fetch the location and list the files and directories in that location
 for i in os.listdir('.'):
@@ -11,10 +11,10 @@ def fld_crtn():
 #checks whether the nwfolder already exists in that location or not if not creates the new folder with nwfolder name
     if not os.path.exists(dest):
         os.mkdir(nwfolder)
-#checks whether the .extension entered presents in that location and created a folder 
+#checks whether the .extension entered is present in that location and creates a folder 
 for i in os.listdir('.'):
     if i.endswith(ext):
         fld_crtn()
-#move the files with file extensions entered into newly created folder 
+#move the files with file extension entered into newly created folder 
         shutil.move(i,dest)
-print('successfully created the folder and move the files there')
+print('successfully created the folder and moved the files there')
