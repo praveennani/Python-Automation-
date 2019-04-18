@@ -1,0 +1,9 @@
+import os
+for i in os.listdir('.'):
+    print(i)
+a=input('\t\n\nenter the directory to see: ')
+if os.path.isdir(a):
+    for i in os.listdir(os.path.abspath(a)):
+        print('\t'+i)
+else:
+    print(a+' is not a directory')
